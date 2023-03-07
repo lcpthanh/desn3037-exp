@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script type="module">
+
+        import 'webcomponent-qr-code';
+        import '@google-web-components/google-chart';
+        import Dialog from 'elix/define/Dialog.js';
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <p>
+        <button id="openButton" onclick="sampleDialog.open()">
+            Open dialog
+        </button>
+    </p>
+    <elix-dialog id="sampleDialog" aria-label="Sample dialog">
+        <div style="padding: 1em;">
+
+            Here's a QR code.
+            <br>
+            <qr-code data="https://gbc.goodcodeclub.com"></qr-code>
+            <div style="margin-top: 1em; text-align: center;">
+                <button onclick="sampleDialog.close()">Close</button>
+            </div>
+        </div>
+    </elix-dialog>
+    <br>
+    <google-chart data='[["Month", "Days"], ["Jan", 31]]'></google-chart>
+
+
+</body>
+
+</html>
